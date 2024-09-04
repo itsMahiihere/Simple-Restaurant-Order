@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Restaurant Order</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to Our Restaurant</h1>
+    <form id="order-form">
+        <div class="menu-item">
+            <label>
+                <input type="checkbox" value="pasta" data-price="100"> Pasta (Rs 100)
+            </label>
+        </div>
+        <div class="menu-item">
+            <label>
+                <input type="checkbox" value="burger" data-price="50"> Burger (Rs 50)
+            </label>
+        </div>
+        <div class="menu-item">
+            <label>
+                <input type="checkbox" value="pizza" data-price="150"> Pizza (Rs 150)
+            </label>
+        </div>
+        <div class="menu-item">
+            <label>
+                <input type="checkbox" value="coffee" data-price="20"> Coffee (Rs 20)
+            </label>
+        </div>
+        <div class="menu-item">
+            <label>
+                <input type="checkbox" value="water_bottle" data-price="10"> Water Bottle (Rs 10)
+            </label>
+        </div>
+        <button type="button" onclick="calculateTotal()">Calculate Total</button>
+    </form>
+
+    <p>Total: Rs <span id="total-amount">0</span></p>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
